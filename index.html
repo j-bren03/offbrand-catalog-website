@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offbrand</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="assets/scripts/main.js" defer></script>
+    <script src="assets/scripts/image-selector.js" defer></script>
+    <script src="assets/scripts/carousel.js" defer></script>
+</head>
+<body>
+    <!-- Start of Header -->
+    <div class="itemsContainer headerItemsContainer">
+        <div class="itemsWrapper headerItemsWrapper">
+            <div class="item headerItem">
+                <div class="itemWrapper headerItemWrapper">
+                    <div id="headerLogo"></div>
+                </div>
+            </div>
+            <div class="item headerItem longItem">
+                <div class="itemWrapper contentItemWrapper headerItemWrapper">
+                    <p class="heading">Links</p>
+                    <ul>
+                        <li><a href="index.html">Home,</a></li>
+                        <li><a href="collection/all-items.html">All Items,</a></li>
+                        <li><a href="collection/tops.html">Tops,</a></li>
+                        <li><a href="collection/jackets.html">Jackets,</a></li>
+                        <li><a href="collection/bottoms.html">Bottoms,</a></li>
+                        <li><a href="collection/dresses.html">Dresses,</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item headerItem" id="headerCart">
+                <div class="itemWrapper contentItemWrapper headerItemWrapper">
+                    <div id="headerCartLeft">
+                        <p class="heading">Bag</p>
+                        <p id="totalItems"></p>
+                    </div>
+                    <div id="headerCartRight">
+                        <p class="heading">Total</p>
+                        <p class="totalPrice"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Header -->
+
+    <!-- Start of Mobile Navigation -->
+    <div id="mobileNavigationMenu">
+        <div id="mobileNavigationMenuWrapper">
+            <ul>
+                <li><a href="index.html">Home,</a></li>
+                <li><a href="collection/all-items.html">All Items,</a></li>
+                <li><a href="collection/tops.html">Tops,</a></li>
+                <li><a href="collection/jackets.html">Jackets,</a></li>
+                <li><a href="collection/bottoms.html">Bottoms,</a></li>
+                <li><a href="collection/dresses.html">Dresses,</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of Mobile Navigation -->
+
+    <!-- Start of Cart Menu -->
+    <div id="cartMenu">
+        <div id="cartMenuWrapper">
+            <div id="cartMenuItemsWrapper"></div>
+            <div class="headingItems" id="totalSection">
+                <div class="cartItemLeft">
+                    <p>Total</p>
+                </div>
+                <div class="cartItemRight">
+                    <p class="totalPrice"></p>
+                </div>
+            </div>
+            <div id="checkoutBtn">
+                <button id="checkout">Checkout</button>
+            </div>
+            <div id="checkoutErrorMessage">
+                <p>Checkout is currently under construction!</p>
+            </div>
+        </div>
+    </div>
+    <!-- End of Cart Menu -->
+
+    <div class="split"></div>
+
+    <!-- Start of Carousel -->
+    <div id="carousel">
+        <div id="carouselControls">
+            <div class="carouselBtn carouselBtn1 activeCarouselBtn"></div>
+            <div class="carouselBtn carouselBtn2"></div>
+            <div class="carouselBtn carouselBtn3"></div>
+            <div class="carouselBtn carouselBtn4"></div>
+            <div class="carouselPauseBtn playingCarousel">
+                <span class="carouselPauseIcon material-icons">pause</span>
+            </div>
+        </div>
+        <div id="carouselWrapper">
+            <div class="carouselItem carouselItem1 activeCarouselItem">
+                <div class="carouselItemWrapper">
+                    <div class="carouselItemInfo">
+                        <div class="headingItems">
+                            <p>Brand New Releases</p>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi quasi tenetur commodi eum quos necessitatibus in debitis hic nesciunt illo doloremque quaerat neque recusandae culpa voluptates distinctio voluptatum, beatae adipisci!</p>
+                        <a href="#newReleases">View Brand New Releases</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carouselItem carouselItem2">
+                <div class="carouselItemWrapper">
+                    <div class="carouselItemInfo">
+                        <div class="headingItems">
+                            <p>Popular Releases</p>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi quasi tenetur commodi eum quos necessitatibus in debitis hic nesciunt illo doloremque quaerat neque recusandae culpa voluptates distinctio voluptatum, beatae adipisci!</p>
+                        <a href="#popularReleases">View Popular Releases</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carouselItem carouselItem3">
+                <div class="carouselItemWrapper">
+                    <div class="carouselItemInfo">
+                        <div class="headingItems">
+                            <p>All Items</p>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi quasi tenetur commodi eum quos necessitatibus in debitis hic nesciunt illo doloremque quaerat neque recusandae culpa voluptates distinctio voluptatum, beatae adipisci!</p>
+                        <a href="collection/all-items.html">View All Items</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carouselItem carouselItem4">
+                <div class="carouselItemWrapper">
+                    <div class="carouselItemInfo">
+                        <div class="headingItems">
+                            <p>Contact</p>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi quasi tenetur commodi eum quos necessitatibus in debitis hic nesciunt illo doloremque quaerat neque recusandae culpa voluptates distinctio voluptatum, beatae adipisci!</p>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                    <div class="carouselItemImg carouselItemImg4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start of Heading -->
+    <div class="itemsContainer headingItemsContainer" id="popularReleases">
+        <div class="itemsWrapper headingItemsWrapper">
+            <div class="item headingItem">
+                <div class="itemWrapper contentItemWrapper headingItemWrapper headingItems">
+                    <p>Popular Releases</p>
+                </div>
+            </div>
+            <div class="item headingItem nullItem">
+                <div class="itemWrapper nullItemWrapper headingItemWrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" preserveAspectRatio="none"> 
+                        <line x1="0" y1="0" x2="200" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line> 
+                        <line x1="200" y1="0" x2="0" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="item headingItem nullItem removeItem">
+                <div class="itemWrapper nullItemWrapper headingItemWrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" preserveAspectRatio="none"> 
+                        <line x1="0" y1="0" x2="200" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line> 
+                        <line x1="200" y1="0" x2="0" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="item headingItem nullItem removeItem">
+                <div class="itemWrapper nullItemWrapper headingItemWrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" preserveAspectRatio="none"> 
+                        <line x1="0" y1="0" x2="200" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line> 
+                        <line x1="200" y1="0" x2="0" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Heading -->
+
+    <!-- Start of Page Items -->
+    <div class="itemsContainer pageItemsContainer">
+        <div class="itemsWrapper pageItemsWrapper">
+            <div class="item pageItem blackTrenchCoat">
+                <a href="collection/jackets/black-trench-coat.html">
+                    <div class="itemWrapper contentItemWrapper pageItemWrapper">
+                        <div class="itemInfo">
+                            <p>Black Trench Coat</p>
+                            <p>$80.00</p>
+                        </div>
+                    </div>
+                    <div class="itemImgOverlay"></div>
+                    <div class="itemImg"></div>
+                </a>
+            </div>
+            <div class="item pageItem blackJacket">
+                <a href="collection/jackets/black-jacket.html">
+                    <div class="itemWrapper contentItemWrapper pageItemWrapper">
+                        <div class="itemInfo">
+                            <p>Black Jacket</p>
+                            <p>$80.00</p>
+                        </div>
+                    </div>
+                    <div class="itemImgOverlay"></div>
+                    <div class="itemImg"></div>
+                </a>
+            </div>
+            <div class="item pageItem blackLacedTop">
+                <a href="collection/tops/black-laced-top.html">
+                    <div class="itemWrapper contentItemWrapper pageItemWrapper">
+                        <div class="itemInfo">
+                            <p>Black Laced Top</p>
+                            <p>$35.00</p>
+                        </div>
+                    </div>
+                    <div class="itemImgOverlay"></div>
+                    <div class="itemImg"></div>
+                </a>
+            </div>
+            <div class="item pageItem blackLeatherJacket">
+                <a href="collection/jackets/black-leather-jacket.html">
+                    <div class="itemWrapper contentItemWrapper pageItemWrapper">
+                        <div class="itemInfo">
+                            <p>Black Leather Jacket</p>
+                            <p>$80.00</p>
+                        </div>
+                    </div>
+                    <div class="itemImgOverlay"></div>
+                    <div class="itemImg"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of Page Items -->
+
+    <!-- Start of Heading -->
+    <div class="itemsContainer headingItemsContainer" id="newReleases">
+        <div class="itemsWrapper headingItemsWrapper">
+            <div class="item headingItem">
+                <div class="itemWrapper contentItemWrapper headingItemWrapper headingItems">
+                    <p>Recent Releases</p>
+                </div>
+            </div>
+            <div class="item headingItem nullItem">
+                <div class="itemWrapper nullItemWrapper headingItemWrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" preserveAspectRatio="none"> 
+                        <line x1="0" y1="0" x2="200" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line> 
+                        <line x1="200" y1="0" x2="0" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="item headingItem nullItem removeItem">
+                <div class="itemWrapper nullItemWrapper headingItemWrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" preserveAspectRatio="none"> 
+                        <line x1="0" y1="0" x2="200" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line> 
+                        <line x1="200" y1="0" x2="0" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="item headingItem nullItem removeItem">
+                <div class="itemWrapper nullItemWrapper headingItemWrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" preserveAspectRatio="none"> 
+                        <line x1="0" y1="0" x2="200" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line> 
+                        <line x1="200" y1="0" x2="0" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Heading -->
+
+    <!-- Start of Page Items -->
+    <div class="itemsContainer pageItemsContainer">
+        <div class="itemsWrapper pageItemsWrapper">
+            <div class="item pageItem blackTrenchCoat">
+                <a href="collection/jackets/black-trench-coat.html">
+                    <div class="itemWrapper contentItemWrapper pageItemWrapper">
+                        <div class="itemInfo">
+                            <p>Black Trench Coat</p>
+                            <p>$80.00</p>
+                        </div>
+                    </div>
+                    <div class="itemImgOverlay"></div>
+                    <div class="itemImg"></div>
+                </a>
+            </div>
+            <div class="item pageItem blackLeatherJacket">
+                <a href="collection/jackets/black-leather-jacket.html">
+                    <div class="itemWrapper contentItemWrapper pageItemWrapper">
+                        <div class="itemInfo">
+                            <p>Black Leather Jacket</p>
+                            <p>$80.00</p>
+                        </div>
+                    </div>
+                    <div class="itemImgOverlay"></div>
+                    <div class="itemImg"></div>
+                </a>
+            </div>
+            <div class="item pageItem redStripedTop">
+                <a href="collection/tops/red-striped-top.html">
+                    <div class="itemWrapper contentItemWrapper pageItemWrapper">
+                        <div class="itemInfo">
+                            <p>Red Striped Top</p>
+                            <p>$35.00</p>
+                        </div>
+                    </div>
+                    <div class="itemImgOverlay"></div>
+                    <div class="itemImg"></div>
+                </a>
+            </div>
+            <div class="item pageItem blueStripedDress">
+                <a href="collection/dresses/blue-striped-dress.html">
+                    <div class="itemWrapper contentItemWrapper pageItemWrapper">
+                        <div class="itemInfo">
+                            <p>Blue Striped Dress</p>
+                            <p>$40.00</p>
+                        </div>
+                    </div>
+                    <div class="itemImgOverlay"></div>
+                    <div class="itemImg"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of Page Items -->
+
+    <!-- Start of Footer -->
+    <div class="itemsContainer footerItemsContainer">
+        <div class="itemsWrapper footerItemsWrapper">
+            <div class="item footerItem">
+                <div class="itemWrapper contentItemWrapper footerItemWrapper">
+                    <p class="heading">Legal</p>
+                    <p>&copy; Offbrand</p>
+                </div>
+            </div>
+            <div class="item footerItem nullItem removeItem">
+                <div class="itemWrapper nullItmeWrapper footerItemWrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" preserveAspectRatio="none"> 
+                        <line x1="0" y1="0" x2="200" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line> 
+                        <line x1="200" y1="0" x2="0" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="item footerItem">
+                <div class="itemWrapper contentItemWrapper footerItemWrapper">
+                    <p class="heading">Socials</p>
+                    <ul>
+                        <li><a href="#">Instagram,</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item footerItem nullItem removeItem">
+                <div class="itemWrapper nullItemWrapper footerItemWrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" preserveAspectRatio="none"> 
+                        <line x1="0" y1="0" x2="200" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line> 
+                        <line x1="200" y1="0" x2="0" y2="200" stroke="#000" vector-effect="non-scaling-stroke"></line>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Footer -->
+</body>
+</html>

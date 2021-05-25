@@ -1,0 +1,1076 @@
+/* --------------------
+Reset Styles
+-------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* --------------------
+Global Styles
+-------------------- */
+
+a {
+    font-family: 'Old Standard TT', serif;
+    font-size: 16px;
+    line-height: 16px;
+    color: black;
+}
+
+p {
+    font-family: 'Old Standard TT', serif;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+p.heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 10px;
+    margin-bottom: 10px;
+}
+
+li {
+    font-family: 'Old Standard TT', serif;
+    list-style: none;
+}
+
+.headingItems p,
+.headingItems li {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+/* --------------------
+Header Styles
+-------------------- */
+
+#headerLogo {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: url(../imgs/logo.png) center no-repeat;
+    background-size: contain;
+}
+
+#headerCart {
+    cursor: pointer;
+}
+
+#headerCartRight {
+    text-align: right;
+}
+
+.split {
+    width: 100%;
+    height: 10vh;
+}
+
+/* --------------------
+Navigation Menu Styles
+-------------------- */
+
+#mobileNavigationMenu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 90vh;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    bottom: 0;
+    left: -100%;
+    background-color: white;
+    z-index: 99;
+    transition: left .5s ease-in-out;
+}
+
+#mobileNavigationMenu.activeNavigationMenu {
+    left: 0;
+}
+
+#mobileNavigationMenu ul {
+    margin-left: 25px;
+}
+
+#mobileNavigationMenu ul li {
+    margin-top: 15px;
+    list-style: none;
+}
+
+#mobileNavigationMenu ul li a {
+    text-decoration: none;
+}
+
+/* --------------------
+Cart Menu Styles
+-------------------- */
+
+#cartMenu {
+    position: fixed;
+    width: 45%;
+    height: 90vh;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    bottom: 0;
+    right: -45%;
+    background-color: white;
+    z-index: 99;
+    transition: right .5s ease-in-out;
+}
+
+#cartMenu.activeCartMenu {
+    right: 0;
+}
+
+.cartItem,
+#totalSection {
+    display: flex;
+    width: 100%;
+    padding: 15px 25px;
+}
+
+.cartItem {
+    border-bottom: 1px solid black;
+}
+
+.cartItemLeft {
+    display: flex;
+    width: 75%;
+}
+
+.cartItemLeft p {
+    margin-right: 5px;
+}
+
+.cartItemRight {
+    width: 25%;
+    text-align: right;
+}
+
+.cartItemRemove {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#checkoutBtn {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+#checkoutBtn button {
+    padding: 15px 0;
+    width: 100%;
+    font-size: 20px;
+    line-height: 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/* --------------------
+Item Image Preview Styles
+-------------------- */
+
+#itemImagePreviewContainer {
+    position: fixed;
+    width: 50%;
+    height: 90vh;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#itemImagePreviewWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+#previewImage {
+    width: 100%;
+    height: 80vh;
+    border-bottom: 1px solid black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.previewImageItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 25%;
+    height: 10vh;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid black;
+}
+
+.previewImageItem p {
+    z-index: 2;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.previewImageItem .previewImageItemOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease-in-out;
+}
+
+.previewImageItem:hover .previewImageItemOverlay {
+    opacity: .5;
+}
+
+.previewImageItem.previewImageItemActive p {
+    visibility: visible;
+}
+
+.previewImageItem.previewImageItemActive .previewImageItemOverlay {
+    opacity: .5;
+}
+
+.previewImageItem svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#previewImage1,
+#previewImage2,
+#previewImage3 {
+    border-right: 1px solid black;
+}
+
+.nullImage {
+    cursor:initial;
+}
+
+/* Flower Dress Active Image */
+#previewImage.pinkFlowerDress.activeImage1 {
+    background-image: url(../imgs/pink-dress/1.jpg);
+}
+
+#previewImage.pinkFlowerDress.activeImage2 {
+    background-image: url(../imgs/pink-dress/2.jpg);
+}
+
+#previewImage.pinkFlowerDress.activeImage3 {
+    background-image: url(../imgs/pink-dress/3.jpg);
+}
+
+/* Black Laced Active Image */
+#previewImage.blackLacedTop.activeImage1 {
+    background-image: url(../imgs/black-laced-top/1.jpg);
+}
+
+#previewImage.blackLacedTop.activeImage2 {
+    background-image: url(../imgs/black-laced-top/2.jpg);
+}
+
+#previewImage.blackLacedTop.activeImage3 {
+    background-image: url(../imgs/black-laced-top/3.jpg);
+}
+
+#previewImage.blackLacedTop.activeImage4 {
+    background-image: url(../imgs/black-laced-top/4.jpg);
+}
+
+/* Black and Yellow Active Image */
+#previewImage.blackAndYellow.activeImage1 {
+    background-image: url(../imgs/black-and-yellow/1.jpg);
+    background-position: top;
+}
+
+#previewImage.blackAndYellow.activeImage2 {
+    background-image: url(../imgs/black-and-yellow/2.jpg);
+    background-position: top;
+}
+
+/* Black Trench Coat Active Image */
+#previewImage.blackTrenchCoat.activeImage1 {
+    background-image: url(../imgs/black-coat/1.jpg);
+}
+
+#previewImage.blackTrenchCoat.activeImage2 {
+    background-image: url(../imgs/black-coat/2.jpg);
+}
+
+#previewImage.blackTrenchCoat.activeImage3 {
+    background-image: url(../imgs/black-coat/3.jpg);
+}
+
+/* Black Jacket Active Image */
+#previewImage.blackJacket.activeImage1 {
+    background-image: url(../imgs/black-jacket/1.jpg);
+}
+
+#previewImage.blackJacket.activeImage2 {
+    background-image: url(../imgs/black-jacket/2.jpg);
+}
+
+/* Black Leather Jacket Active Image */
+#previewImage.blackLeatherJacket.activeImage1 {
+    background-image: url(../imgs/black-leather-jacket/1.jpg);
+    background-position: top;
+}
+
+#previewImage.blackLeatherJacket.activeImage2 {
+    background-image: url(../imgs/black-leather-jacket/2.jpg);
+    background-position: top;
+}
+
+#previewImage.blackLeatherJacket.activeImage3 {
+    background-image: url(../imgs/black-leather-jacket/3.jpg);
+    background-position: top;
+}
+
+/* Blue Striped Dress Active Image */
+#previewImage.blueStripedDress.activeImage1 {
+    background-image: url(../imgs/blue-stripes/1.jpg);
+}
+
+#previewImage.blueStripedDress.activeImage2 {
+    background-image: url(../imgs/blue-stripes/2.jpg);
+}
+
+/* Red Striped Top Active Image */
+#previewImage.redStripedTop.activeImage1 {
+    background-image: url(../imgs/red-stripes/1.jpg);
+}
+
+#previewImage.redStripedTop.activeImage2 {
+    background-image: url(../imgs/red-stripes/2.jpg);
+}
+
+#previewImage.redStripedTop.activeImage3 {
+    background-image: url(../imgs/red-stripes/3.jpg);
+}
+
+/* Tan Cargo Pants Active Image */
+#previewImage.tanCargoPants.activeImage1 {
+    background-image: url(../imgs/tan-cargo-pants/1.jpg);
+}
+
+#previewImage.tanCargoPants.activeImage2 {
+    background-image: url(../imgs/tan-cargo-pants/2.jpg);
+}
+
+/* Flower Dress Preview Images */
+#previewImage1.pinkFlowerDress {
+    background-image: url(../imgs/pink-dress/1.jpg);
+}
+
+#previewImage2.pinkFlowerDress {
+    background-image: url(../imgs/pink-dress/2.jpg);
+}
+
+#previewImage3.pinkFlowerDress {
+    background-image: url(../imgs/pink-dress/3.jpg);
+}
+
+/* Black Laced Preview Images */
+#previewImage1.blackLacedTop {
+    background-image: url(../imgs/black-laced-top/1.jpg);
+}
+
+#previewImage2.blackLacedTop {
+    background-image: url(../imgs/black-laced-top/2.jpg);
+}
+
+#previewImage3.blackLacedTop {
+    background-image: url(../imgs/black-laced-top/3.jpg);
+}
+
+#previewImage4.blackLacedTop {
+    background-image: url(../imgs/black-laced-top/4.jpg);
+}
+
+/* Black and Yellow Preivew Images */
+#previewImage1.blackAndYellow {
+    background-image: url(../imgs/black-and-yellow/1.jpg);
+}
+
+#previewImage2.blackAndYellow {
+    background-image: url(../imgs/black-and-yellow/2.jpg);
+}
+
+/* Black Trench Coat Preview Images */
+#previewImage1.blackTrenchCoat {
+    background-image: url(../imgs/black-coat/1.jpg);
+}
+
+#previewImage2.blackTrenchCoat {
+    background-image: url(../imgs/black-coat/2.jpg);
+}
+
+#previewImage3.blackTrenchCoat {
+    background-image: url(../imgs/black-coat/3.jpg);
+}
+
+/* Black Jacket Preview Images */
+#previewImage1.blackJacket {
+    background-image: url(../imgs/black-jacket/1.jpg);
+}
+
+#previewImage2.blackJacket {
+    background-image: url(../imgs/black-jacket/2.jpg);
+}
+
+/* Black Leather Jacket Preview Images */
+#previewImage1.blackLeatherJacket {
+    background-image: url(../imgs/black-leather-jacket/1.jpg);
+}
+
+#previewImage2.blackLeatherJacket {
+    background-image: url(../imgs/black-leather-jacket/2.jpg);
+}
+
+#previewImage3.blackLeatherJacket {
+    background-image: url(../imgs/black-leather-jacket/3.jpg);
+}
+
+/* Blue Striped Dress Preview Images */
+#previewImage1.blueStripedDress {
+    background-image: url(../imgs/blue-stripes/1.jpg);
+}
+
+#previewImage2.blueStripedDress {
+    background-image: url(../imgs/blue-stripes/2.jpg);
+}
+
+/* Red Striped Top Images */
+#previewImage1.redStripedTop {
+    background-image: url(../imgs/red-stripes/1.jpg);
+}
+
+#previewImage2.redStripedTop {
+    background-image: url(../imgs/red-stripes/2.jpg);
+}
+
+#previewImage3.redStripedTop {
+    background-image: url(../imgs/red-stripes/3.jpg);
+}
+
+/* Tan Cargo Pants Images */
+#previewImage1.tanCargoPants {
+    background-image: url(../imgs/tan-cargo-pants/1.jpg);
+}
+
+#previewImage2.tanCargoPants {
+    background-image: url(../imgs/tan-cargo-pants/2.jpg);
+}
+
+/* --------------------
+Item Content Overview Styles
+-------------------- */
+
+#itemContentOverview {
+    position: relative;
+    float: right;
+    width: 50%;
+    height: 90vh;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+/* --------------------
+Description Styles
+-------------------- */
+
+#descriptionContainer {
+    padding: 75px 0;
+    width: 100%;
+    height: 80vh;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+#descriptionTextContent {
+    width: 50%;
+    margin: auto;
+}
+
+.descriptionItem {
+    margin-bottom: 25px;
+}
+
+#descriptionHeadingWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#descriptionContent p {
+    margin-bottom: 25px;
+}
+
+#descriptionContent #sizeSelect {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+#descriptionContent #sizeSelect li {
+    list-style: none;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.sizeSelectItem.selectedSizeItem {
+    text-decoration: underline;
+}
+
+#descriptionContent button {
+    padding: 15px 0;
+    width: 100%;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 25px;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#addErrorMessage {
+    width: 100%;
+}
+
+#checkoutErrorMessage {
+    width: 50%;
+    margin: auto;
+}
+
+#addErrorMessage,
+#checkoutErrorMessage {
+    display: none;
+    padding: 15px;
+    background-color: #ffb8b8;
+}
+
+#addErrorMessage p, 
+#checkoutErrorMessage p {
+    color: #ff1919;
+    margin-bottom: 0;
+}
+
+#checkoutErrorMessage p {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+#addErrorMessage.activeErrorMessage,
+#checkoutErrorMessage.activeErrorMessage {
+    display: block;
+}
+
+/* --------------------
+Global Item Styles
+-------------------- */
+
+.itemsContainer {
+    width: 100%;
+    border-left: 1px solid black;
+}
+
+.itemsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    position: relative;
+    width: 25%;
+    border-bottom: 1px solid black;
+}
+
+.itemWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.item:nth-child(even) {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.item.longItem {
+    width: 50%;
+}
+
+.item.nullItem svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* --------------------
+Header Item Styles
+-------------------- */
+
+.item.headerItem {
+    height: 10vh;
+    border-top: 1px solid black;
+}
+
+.itemsContainer.headerItemsContainer {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    z-index: 100;
+}
+
+.itemsWrapper.headerItemsWrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.item.headerItem:nth-child(2) .itemWrapper.headerItemWrapper {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    height: 100%;
+}
+
+.item.headerItem:nth-child(2) .itemWrapper.headerItemWrapper ul {
+    display: flex;
+}
+
+.item.headerItem:nth-child(2) .itemWrapper.headerItemWrapper ul li {
+    margin-right: 5px;
+}
+
+.item.headerItem:nth-child(2) .itemWrapper.headerItemWrapper ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.item.headerItem:nth-child(3) {
+    border-right: 1px solid black;
+}
+
+.item.headerItem:nth-child(3) .itemWrapper.headerItemWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.item.headerItem:nth-child(2) .itemWrapper.headerItemWrapper,
+.item.headerItem:nth-child(3) .itemWrapper.headerItemWrapper {
+    padding: 0 25px;
+}
+
+/* --------------------
+Heading Item Styles
+-------------------- */
+
+.item.headingItem {
+    height: 10vh;
+}
+
+.item.headingItem:nth-child(1) .itemWrapper.contentItemWrapper.headingItemWrapper {
+    padding: 0 25px;
+}
+
+.item.headingItem .itemWrapper.contentItemWrapper.headingItemWrapper {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+/* --------------------
+Page Item Styles
+-------------------- */
+
+.item.pageItem {
+    height: 55vh;
+    cursor: pointer;
+}
+
+.item.pageItem.nullItem {
+    cursor: default;
+}
+
+.itemWrapper.contentItemWrapper.pageItemWrapper {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.item.pageItem .itemInfo {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+}
+
+.item.pageItem .itemImgOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity .25s ease-in-out;
+}
+
+.item.pageItem:hover .itemImgOverlay {
+    opacity: .5;
+}
+
+.item.pageItem .itemImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: no-repeat center;
+    background-size: cover;
+}
+
+.item.pageItem.blackAndYellow .itemImg {
+    background-image: url(../imgs/black-and-yellow/1.jpg);
+}
+
+.item.pageItem.blackTrenchCoat .itemImg {
+    background-image: url(../imgs/black-coat/1.jpg);
+}
+
+.item.pageItem.blackJacket .itemImg {
+    background-image: url(../imgs/black-jacket/1.jpg);
+}
+
+.item.pageItem.blackLacedTop .itemImg {
+    background-image: url(../imgs/black-laced-top/1.jpg);
+}
+
+.item.pageItem.blackLeatherJacket .itemImg {
+    background-image: url(../imgs/black-leather-jacket/1.jpg);
+}
+
+.item.pageItem.blueStripedDress .itemImg {
+    background-image: url(../imgs/blue-stripes/1.jpg);
+}
+
+.item.pageItem.pinkFlowerDress .itemImg {
+    background-image: url(../imgs/pink-dress/1.jpg);
+}
+
+.item.pageItem.redStripedTop .itemImg {
+    background-image: url(../imgs/red-stripes/1.jpg);
+}
+
+.item.pageItem.tanCargoPants .itemImg {
+    background-image: url(../imgs/tan-cargo-pants/1.jpg);
+}
+
+/* --------------------
+Footer Item Styles
+-------------------- */
+
+.item.footerItem {
+    height: 10vh;
+}
+
+.itemWrapper.contentItemWrapper.footerItemWrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 25px;
+}
+
+/* --------------------
+Image Carousel Styles
+-------------------- */
+
+#carousel {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#carouselControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 25px;
+    bottom: 0;
+    z-index: 2;
+}
+
+#carouselWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carouselBtn {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color .25s ease-in-out;
+}
+
+.carouselBtn.activeCarouselBtn {
+    background-color: black;
+}
+
+.carouselItem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+}
+
+.carouselItem.activeCarouselItem {
+    opacity: 1;
+}
+
+.carouselItemWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carouselItemWrapper p {
+    margin-bottom: 25px;
+}
+
+.carouselItemWrapper .carouselItemInfo {
+    position: absolute;
+    width: 25%;
+    padding: 25px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.carouselPauseBtn {
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.carouselPauseBtn span {
+    font-size: 16px;
+}
+
+/* --------------------
+Contact Section Styles
+-------------------- */
+
+#contactSection {
+    width: 100%;
+    height: 80vh;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#contactSectionWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* --------------------
+Mobile Styles
+-------------------- */
+
+@media only screen and (max-width: 950px) {
+
+    /* --------------------
+    Mobile Global Styles
+    -------------------- */
+
+    p,
+    a,
+    li {
+        font-size: 12px;
+    }
+
+    p.heading {
+        margin-bottom: 5px;
+    }
+
+    /* --------------------
+    Mobile Navigation Menu Styles
+    -------------------- */
+
+    #mobileNavigationMenu {
+        display: block;
+    }
+
+    /* --------------------
+    Mobile Cart Menu Styles
+    -------------------- */
+
+    #cartMenu {
+        width: 100%;
+        right: -100%;
+    }
+
+    /* --------------------
+    Mobile Item Image Prview Styles
+    -------------------- */
+    #itemImagePreviewContainer {
+        position: relative;
+        width: 100%;
+        height: 90vh;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    
+    /* --------------------
+    Mobile Item Content Overview Styles
+    -------------------- */
+    
+    #itemContentOverview {
+        float: none;
+        width: 100%;
+        height: 100%;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    /* --------------------
+    Mobile Description Styles
+    -------------------- */
+
+    #descriptionContainer {
+        height: 100%;
+    }
+
+    #descriptionTextContent {
+        width: 80%;
+    }
+
+    /* --------------------
+    Mobile Global Item Styles
+    -------------------- */
+
+    .item {
+        width: 50%;
+    }
+
+    .item.nullItem.removeItem {
+        display: none;
+    }
+
+    /* --------------------
+    Mobile Header Item Styles
+    -------------------- */
+
+    .item.headerItem.longItem {
+        display: none;
+    }
+
+    .item.headerItem:nth-child(1) {
+        border-right: 1px solid black;
+    }
+
+    .item.headerItem:nth-child(3) .itemWrapper.headerItemWrapper {
+        padding: 0 10px;
+    }
+
+    /* --------------------
+    Mobile Heading Item Styles
+    -------------------- */
+
+    .item.headingItem:nth-child(1) .itemWrapper.contentItemWrapper.headingItemWrapper {
+        padding: 0 10px;
+    }
+
+    /* --------------------
+    Mobile Page Item Styles
+    -------------------- */
+
+    .item.pageItem:hover .itemImgOverlay {
+        opacity: 0;
+    }
+
+    /* --------------------
+    Mobile Footer Item Styles
+    -------------------- */
+
+    .item.footerItem:nth-child(3) {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .item.footerItem ul {
+        display: flex;
+    }
+
+    .item.footerItem li {
+        margin-right: 5px;
+    }
+
+    .itemWrapper.contentItemWrapper.footerItemWrapper {
+        padding: 0 10px;
+    }
+
+    /* --------------------
+    Image Carousel Styles
+    -------------------- */
+
+    #carouselControls {
+        padding: 25px 10px;
+    }
+
+    .carouselItemWrapper .carouselItemInfo {
+        width: 100%;
+        padding: 25px 10px;
+    }
+
+}
+
+@media only screen and (max-width: 325px) {
+
+    /* --------------------
+    Mobile Global Styles
+    -------------------- */
+
+    p,
+    a,
+    li {
+        font-size: 11px;
+    }
+
+}
